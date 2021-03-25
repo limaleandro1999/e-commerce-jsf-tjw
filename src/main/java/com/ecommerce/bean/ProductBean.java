@@ -26,21 +26,4 @@ public class ProductBean implements Serializable {
         return this.products;
     }
 }
-//    void createProductGet() {
-//        String name =  req.getParameter("name");
-//        String description =  req.getParameter("description");
-//        Long price = Long.parseLong(req.getParameter("price"));
-//        String imageUrl = req.getParameter("imageUrl");
-//
-//        Product product = new Product();
-//        product.setName(name);
-//        product.setDescription(description);
-//        product.setPrice(price);
-//        product.setImageUrl(imageUrl);
-//
-//        ProductDAO productDAO = new ProductDAO();
-//        productDAO.createProduct(product);
-//
-//        res.sendRedirect("home");
-//    }
 
