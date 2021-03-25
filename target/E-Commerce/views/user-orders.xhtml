@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>(#{orderBean.userOrders.size()}) Minhas Compras</title>
+        <ui:include src="../common/head-config.xhtml"/>
+    </h:head>
+    <h:body>
+        <ui:include src="../common/navbar.xhtml"/>
+        <div class="orders-list-container">
+            <ui:repeat var="order"  value="#{orderBean.userOrders}">
+                <div class="order-item-container">
+                    <div class="order-item-shipping-info">
+                        <h2>Envio</h2>
+                        <p>#{order.user.firstName} #{order.user.lastName}</p>
+                        <p>#{order.address} - #{order.city} - #{order.state} - #{order.zipcode}</p>
+                    </div>
+                    <div class="order-item-products-info">
+                        <h2>Produtos</h2>
+                        <ul>
+                            <ui:repeat value="#{order.orderSegments}" var="orderItem">
+                                <li>
+                                    ${orderItem.product.name} -
+                                    <h:outputText value = "#{(orderItem.product.price/ 100)}" >
+                                        <f:convertNumber minFractionDigits = "2" locale="pt-BR"/>
+                                    </h:outputText>
+                                </li>
+                            </ui:repeat>
+                        </ul>
+                    </div>
+                    <div class="order-item-billing-info">
+                        <h3>Total</h3>
+                        <h:outputText value = "#{(order.orderTotal/ 100)}" >
+                            <f:convertNumber minFractionDigits = "2" locale="pt-BR"/>
+                        </h:outputText>
+                    </div>
+                </div>
+            </ui:repeat>
+        </div>
+    </h:body>
+</html>

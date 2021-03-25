@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Novo Usuário</title>
+    <ui:include src="../common/head-config.xhtml"/>
+</h:head>
+
+<h:body>
+    <h1>Cadastre-se</h1>
+    <h:form>
+        <div class="form-field">
+            <label>Nome</label>
+            <h:inputText value="#{userBean.firstName}"/>
+        </div>
+
+        <div class="form-field">
+            <label>Sobrenome</label>
+            <h:inputText value="#{userBean.lastName}"/>
+        </div>
+
+        <div class="form-field">
+            <label>Email</label>
+            <h:inputText value="#{userBean.email}"/>
+        </div>
+
+        <div class="form-field">
+            <label>Senha</label>
+            <h:inputSecret value="#{userBean.password}"/>
+        </div>
+
+        <div class="form-field">
+            <label>CPF</label>
+            <h:inputText value="#{userBean.cpf}"/>
+        </div>
+
+        <h:commandButton value="Cadastrar" action="#{userBean.register}"/>
+    </h:form>
+</h:body>
+</html>

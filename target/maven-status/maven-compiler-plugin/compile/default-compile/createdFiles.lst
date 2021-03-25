@@ -1,0 +1,16 @@
+com\ecommerce\dao\OrderDAO.class
+com\ecommerce\dao\ProductDAO.class
+com\ecommerce\model\Cart.class
+com\ecommerce\model\Order.class
+com\ecommerce\controller\ProductBean.class
+com\ecommerce\dao\CartDAO.class
+com\ecommerce\controller\CartController.class
+com\ecommerce\dao\BasicDAO.class
+com\ecommerce\controller\BaseServlet.class
+com\ecommerce\model\User.class
+com\ecommerce\model\LineItem.class
+com\ecommerce\controller\OrderController.class
+com\ecommerce\model\Product.class
+com\ecommerce\dao\UserDAO.class
+com\ecommerce\controller\HomeController.class
+com\ecommerce\controller\UserController.class

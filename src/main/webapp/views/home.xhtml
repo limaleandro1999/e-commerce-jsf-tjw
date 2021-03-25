@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:c="http://java.sun.com/jsp/jstl/core">
+<h:head>
+    <title>E-Commerce</title>
+    <ui:include src="../common/head-config.xhtml"/>
+</h:head>
+<h:body>
+    <ui:include src="../common/navbar.xhtml"/>
+    <h1>Produtos à venda</h1>
+    <div class="product-list-container">
+        <ui:repeat var="product"  value="#{productBean.products}">
+            <div class="product-container">
+                <img src="#{product.imageUrl}" alt="#{product.name}"/>
+                <p class="product-name">#{product.name}</p>
+                <p class="product-description">#{product.description}</p>
+                <div class="product-price-container">
+                    <p>R$</p>
+                    <h:outputText value = "#{(product.price / 100)}" >
+                        <f:convertNumber minFractionDigits = "2" locale="pt-BR"/>
+                    </h:outputText>
+                    <c:choose>
+                        <c:when test="#{userBean.user == null}">
+                            <h:form>
+                                <h:commandButton action="#{navigationBean.goToLoginPage}" value="Adicionar"/>
+                            </h:form>
+                        </c:when>
+                        <c:otherwise>
+                            <h:form>
+                                <h:commandButton action="#{cartBean.addItem(product.id)}" value="Adicionar"/>
+                            </h:form>
+                        </c:otherwise>
+                    </c:choose>
+                </div>
+            </div>
+        </ui:repeat>
+    </div>
+</h:body>
+</html>

@@ -1,0 +1,127 @@
+p {
+    margin: 3px;
+}
+
+.product-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.product-container {
+    border: 5px #f3f3f3;
+    margin: 10px 15px;
+    justify-content: center;
+    width: 194px;
+}
+
+.cart-page-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.cart-total-container {
+    border: 5px #f3f3f3;
+}
+
+.cart-item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px #c3c3c3 solid;
+    margin: 10px 15px;
+}
+
+.cart-item-container img {
+    width: 150px;
+    height: 150px;
+}
+
+.cart-item-container .product-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.cart-item-container .product-info-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 50px;
+}
+
+.cart-item-price-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 15px;
+    margin-left: 50px;
+}
+
+.cart-item-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-container img {
+    width: 200px;
+    height: 200px;
+}
+
+.product-container .product-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-container .product-description {
+    font-size: 16px;
+    text-align: justify;
+}
+
+.product-container .product-price-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-field {
+    display: block;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-quantity {
+    display: inline;
+}
+
+.orders-list-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.order-item-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: 2px #c3c3c3 solid;
+    margin: 10px 15px;
+    justify-content: space-around;
+}
+
+.order-item-shipping-info {
+
+}
+
+.order-item-products-info {
+
+}
+
+.order-item-billing-info {
+
+}
