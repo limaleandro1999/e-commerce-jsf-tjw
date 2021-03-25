@@ -11,19 +11,10 @@ import java.util.List;
 @ManagedBean(name = "productBean", eager = true)
 @ApplicationScoped
 public class ProductBean implements Serializable {
-    List<Product> products;
-
-    public ProductBean() {
-        this.fetchProducts();
-    }
-
-    public void fetchProducts() {
-        ProductDAO productDAO = new ProductDAO();
-        this.products = productDAO.getProductList();
-    }
-
     public List<Product> getProducts() {
-        return this.products;
+        ProductDAO productDAO = new ProductDAO();
+        List<Product> products = productDAO.getProductList();
+        return products;
     }
 }
 
