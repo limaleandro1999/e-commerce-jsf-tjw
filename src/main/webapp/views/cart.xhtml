@@ -17,7 +17,7 @@
                 <ui:repeat var="cartItem"  value="#{cartBean.cart}">
                     <div class="cart-item-container">
                         <div class="product-info">
-                            <img src="${cartItem.product.imageUrl}" />
+                            <img src="#{cartItem.product.imageUrl}" />
                             <div class="product-info-text">
                                 <p class="cart-item-name">#{cartItem.product.name}</p>
                                 <div>
